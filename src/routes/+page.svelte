@@ -1,10 +1,6 @@
 <script lang="ts">
 	import { ChartBar, Lightbulb, TrendingUp, ChevronRight } from '@lucide/svelte';
-	import * as Card from '$lib/components/ui/card';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import { Input } from '$lib/components/ui/input';
-	import { Textarea } from '$lib/components/ui/textarea';
-	import { Label } from '$lib/components/ui/label';
+
 	import Carousel from '$lib/components/Carousel.svelte';
 	import BlureFade from '$lib/BlureFade.svelte';
 	import Hr from '$lib/components/HR.svelte';
@@ -29,13 +25,12 @@
 	];
 </script>
 
-<!-- Hero Section -->
 <section class="relative overflow-hidden px-4 py-16 sm:px-6 lg:px-8">
 	<div class="container mx-auto">
-		<div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+		<div class="grid items-center gap-12 md:grid-cols-2 md:gap-16">
 			<!-- Text Content -->
 			<div
-				class="order-2 flex flex-col items-center text-center lg:order-1 lg:items-start lg:text-left"
+				class="order-2 flex flex-col items-center text-center md:order-1 md:items-start md:text-left"
 			>
 				<BlureFade>
 					<h1 class="myshadow text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
@@ -55,7 +50,7 @@
 			</div>
 
 			<!-- Image -->
-			<div class="order-1 lg:order-2">
+			<div class="order-1 md:order-2">
 				<div class="relative z-10 max-w-[600px]">
 					<Carousel />
 				</div>
@@ -63,7 +58,6 @@
 		</div>
 	</div>
 </section>
-
 <section class="mt-12 flex flex-col px-4 py-20 lg:px-8">
 	<BlureFade delay={0.2}>
 		<h1 class=" myshadow ml-11 w-fit text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
