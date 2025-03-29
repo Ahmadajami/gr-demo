@@ -17,11 +17,11 @@
 				<div class="hidden 2xl:block">
 					<Zap class="h-5 w-5" />
 				</div>
-				<h2 class="hidden text-center text-sm font-semibold lg:flex">{PUBLIC_APP_NAME}</h2>
+				<h2 class="hidden text-center text-sm font-semibold lg:flex">Grresin</h2>
 			</a>
 
 			<a href="/">
-				<h2 class="text-center text-sm font-semibold lg:hidden">{Grresin}</h2>
+				<h2 class="text-center text-sm font-semibold lg:hidden">Grresin</h2>
 			</a>
 
 			<!-- Desktop Navigation -->
