@@ -106,15 +106,16 @@
 		</p>
 	</div>
 </section>
-<section class="my-24">
-	<div class=" flex h-[40vh] flex-row">
+
+<section class="my-24 h-[50vh]">
+	<div class=" flex flex-col md:flex-row">
 		<div class="basis-3/6">
 			<div class="container mx-auto px-4">
 				<h1 class="text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
 					Artistic Section:
 				</h1>
 				<br />
-				<h2 class=" w-fit text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
+				<h2 class=" w-fit text-3xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
 					What do we offer to artists and creatives?
 					<Hr
 						id="small"
@@ -125,7 +126,7 @@
 						}}
 					/>
 				</h2>
-				<p class="text-bold my-8 mr-0 text-pretty text-3xl tracking-tighter">
+				<p class="text-bold container my-8 mr-0 h-[10%] text-pretty text-2xl tracking-tighter">
 					In our world, we create timeless masterpieces from visions. We make the difference, and
 					you make the impossible.
 				</p>

@@ -17,7 +17,6 @@
 <main class="my-gg bg-cover bg-center">
 	{@render children()}
 </main>
-<Footer />
 
 <style>
 	.my-gg {
