@@ -2,7 +2,6 @@
 	import { Zap, Bird, Menu } from '@lucide/svelte';
 	import * as Sheet from '$lib/components/ui/sheet/index';
 	import Button from '../ui/button/button.svelte';
-	import { PUBLIC_APP_NAME } from '$env/static/public';
 
 	let open = $state(false);
 </script>
@@ -22,7 +21,7 @@
 			</a>
 
 			<a href="/">
-				<h2 class="text-center text-sm font-semibold lg:hidden">{PUBLIC_APP_NAME}</h2>
+				<h2 class="text-center text-sm font-semibold lg:hidden">{Grresin}</h2>
 			</a>
 
 			<!-- Desktop Navigation -->
