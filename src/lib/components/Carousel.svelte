@@ -23,19 +23,13 @@
 <section class="soso">
 	<div id="img-container" bind:this={imgContainer}>
 		<div class="box">
-			<img src="https://i1.sndcdn.com/artworks-000137479333-rpqogd-t500x500.jpg" alt="" />
+			<img src="resin_gallery.png" alt="Resin Gallery  " />
 		</div>
 		<div class="box">
-			<img src="https://upload.wikimedia.org/wikipedia/en/7/76/Primetimeofyourlife.jpg" alt="" />
+			<img src="resin_gallery_second.png" alt="Resin Gallery" />
 		</div>
 		<div class="box">
-			<img
-				src="https://upload.wikimedia.org/wikipedia/en/8/84/RobotRock.DaftPunk.single.jpg"
-				alt=""
-			/>
-		</div>
-		<div class="box">
-			<img src="https://i1.sndcdn.com/artworks-000655973617-9rv0tb-t500x500.jpg" alt="" />
+			<img src="resin_gallery_third.png" alt="Resin Gallery" />
 		</div>
 	</div>
 </section>
@@ -51,6 +45,16 @@
 		flex-direction: column-reverse;
 		gap: 2em;
 		background: radial-gradient(var(--body-bg), #000);
+	}
+	[dir='rtl'] .soso {
+		align-items: end;
+		justify-content: end;
+	}
+
+	@media (width>768px) {
+		.soso {
+			flex-direction: row;
+		}
 	}
 	#img-container {
 		height: 230px;
@@ -69,10 +73,7 @@
 		transition: 800ms ease-in-out;
 		overflow: hidden;
 	}
-	.box img {
-		width: 100%;
-		height: 100%;
-	}
+
 	.box:first-of-type {
 		right: 15%; /* Changed left to right */
 		opacity: 0;
@@ -96,7 +97,6 @@
 		opacity: 0.5;
 		z-index: 5;
 		transform: scale3d(0.5, 0.5, 0.5) translate(50%, -50%) rotateY(10deg) translateZ(-100px); /* Changed translate and rotate */
-		color: #eee;
 	}
 
 	@media (width>768px) {

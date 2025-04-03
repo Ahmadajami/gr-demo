@@ -2,6 +2,7 @@
 	import { Zap, Bird, Menu } from '@lucide/svelte';
 	import * as Sheet from '$lib/components/ui/sheet/index';
 	import Button from '../ui/button/button.svelte';
+	import { setLocale } from '$lib/paraglide/runtime';
 
 	let open = $state(false);
 </script>
@@ -36,7 +37,22 @@
 
 			<div class="flex w-1/3 items-center justify-end gap-4">
 				<Button variant="ghost" size="sm" class="hidden lg:flex">Contact Us</Button>
-
+				<Button
+					variant="ghost"
+					size="sm"
+					class="hidden lg:flex"
+					onclick={() => {
+						setLocale('en');
+					}}>en</Button
+				>
+				<Button
+					variant="ghost"
+					size="sm"
+					class="hidden lg:flex"
+					onclick={() => {
+						setLocale('ar');
+					}}>ar</Button
+				>
 				<!-- Mobile Menu Button -->
 				<Button variant="ghost" size="icon" class="lg:hidden" onclick={() => (open = true)}>
 					<Menu class="h-5 w-5" />

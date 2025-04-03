@@ -1,4 +1,7 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"example_message": "Hello world {username}"
+	"welcome": "Welcome To ",
+	"welcomeHeader": "Graffiti Resin World.",
+	"welcomeDesc": "Graffiti Design is not just a company; it's a passion embodied in every design. We believe that creativity knows no bounds, and we strive to transform your visions into masterpieces that touch hearts and inspire minds. Discover our world filled with colors and innovative ideas, and let's make your own mark on this world together.",
+	"department": "Our departments"
 }

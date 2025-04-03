@@ -20,7 +20,7 @@
 		isInView = inView;
 	}}
 	class:animated-ruler={isInView}
-	class="mt-2 border-2 border-solid {borderColor}"
+	class="mt-6 border-2 border-solid {borderColor}"
 />
 
 <style>
