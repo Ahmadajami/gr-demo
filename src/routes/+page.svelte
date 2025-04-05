@@ -6,8 +6,11 @@
 	import Hr from '$lib/components/HR.svelte';
 	import BentoGrid from '$lib/components/layout/Grid/BentoGrid.svelte';
 	import { m } from '$lib/paraglide/messages';
+	import Cards from '$lib/Cards.svelte';
+	import GridCard from '$lib/GridCard.svelte';
+	import ContactUs from '$lib/ContactUs.svelte';
 
-	const services = [
+	const card_articals = [
 		{
 			title: 'Strategic Planning',
 			description: 'Custom strategies tailored to your business goals and market position.',
@@ -129,10 +132,75 @@
 		</div>
 	</div>
 </section>
-<section class="h-[60vh] w-full">s</section>
+<section class="hide-scroller my-8 overflow-x-auto pb-4">
+	<div class="flex flex-nowrap gap-4 px-4 sm:px-8">
+		{#each Array(20) as _, i}
+			<Cards />
+		{/each}
+	</div>
+</section>
+<section class="my-20">
+	<div class="flex flex-col gap-8 md:h-64 md:flex-row-reverse">
+		<!-- Removed fixed height on mobile -->
+		<div class="h-48 md:h-full md:basis-3/5">
+			<!-- Added responsive height -->
+			<img
+				class="h-full w-full rounded-l-md object-cover drop-shadow-2xl"
+				src="/art/art_second.png"
+				alt="resin Project"
+			/>
+		</div>
+		<div class="self-center md:basis-2/5">
+			<!-- Removed self-center on mobile -->
+			<p class="px-2 text-3xl font-semibold md:text-4xl">
+				<!-- Responsive text size -->
+				Project Section: <br />
+				What do We offer
+			</p>
+
+			<hr class="mx-4 my-4 h-2 w-48 rounded-sm border-0 bg-blue-400 md:my-10" />
+		</div>
+	</div>
+</section>
+
+<article class=" my-9 px-4">
+	<!-- Added horizontal padding -->
+	<p class=" text-lg leading-8 text-black drop-shadow-2xl md:ms-4 md:text-3xl md:leading-10">
+		{m.project_section()}
+	</p>
+</article>
+<section class="my-10">
+	<div class="grid grid-cols-1 gap-4 text-center md:grid-cols-2">
+		{#each Array(10) as _, i}
+			<GridCard />
+		{/each}
+	</div>
+</section>
+<section>
+	<BlureFade delay={0.2}>
+		<h1 class="  myshadow w-fit text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+			{m.partner()}<br />
+			<span dir="ltr" class=" ms-9 text-left">
+				Graffiti Resin
+				<hr class="mr-14 h-2 w-full rounded-sm border-0 bg-blue-400 md:my-10" />
+			</span>
+		</h1>
+
+		<figure class="container mx-auto my-6">
+			<img src="partners.png" alt="our Parnters" loading="lazy" />
+		</figure>
+	</BlureFade>
+</section>
+
+<section>
+	<ContactUs />
+</section>
 
 <style>
 	.myshadow {
-		text-shadow: 2px 2px #a7158093;
+		text-shadow: 2px 2px #a715805b;
+	}
+	.hide-scroller {
+		scrollbar-width: none;
 	}
 </style>

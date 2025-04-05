@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from '$lib/paraglide/messages';
 	import { type Icon as IconType } from '@lucide/svelte';
 	import {
 		ShoppingCart,
@@ -29,7 +30,7 @@
 	let items: GridItem[] = [
 		{
 			id: '1',
-			title: 'Shop',
+			title: m.shop(),
 			icon: ShoppingCart,
 			href: '/',
 			colSpan: 1,
@@ -40,7 +41,7 @@
 		},
 		{
 			id: '2',
-			title: 'Partner',
+			title: m.partner(),
 			icon: Users,
 			href: '/',
 			colSpan: 1,
@@ -51,7 +52,7 @@
 		},
 		{
 			id: '3',
-			title: 'Projects',
+			title: m.projects(),
 			icon: ClipboardList,
 			href: '/',
 			colSpan: 1,
@@ -61,7 +62,7 @@
 		},
 		{
 			id: '4',
-			title: 'AboutUs',
+			title: m.about(),
 			icon: Info,
 			href: '/',
 			colSpan: 2,
@@ -71,7 +72,7 @@
 		},
 		{
 			id: '5',
-			title: 'Sales',
+			title: m.sales(),
 			icon: ChartSpline,
 			href: '/',
 			colSpan: 2,
@@ -82,7 +83,7 @@
 		},
 		{
 			id: '6',
-			title: 'Products',
+			title: m.products(),
 			icon: Tag,
 			href: '/',
 			colSpan: 1,
@@ -93,7 +94,7 @@
 		},
 		{
 			id: '7',
-			title: 'Flooring',
+			title: m.Flooring(),
 			icon: Layers,
 			href: '/',
 			colSpan: 1,
@@ -103,7 +104,7 @@
 		},
 		{
 			id: '8',
-			title: 'Blogs',
+			title: m.blogs(),
 			icon: BookOpen,
 			href: '/',
 			colSpan: 2,
@@ -114,7 +115,7 @@
 		},
 		{
 			id: '9',
-			title: 'Make Your Own',
+			title: m.make(),
 			icon: File,
 			href: '/',
 			colSpan: 2,
