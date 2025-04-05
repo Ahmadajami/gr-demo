@@ -13,12 +13,6 @@
 	{/each}
 </div>
 <Navbar />
-<main class="my-gg bg-cover bg-center">
+<main>
 	{@render children()}
 </main>
-
-<style>
-	.my-gg {
-		background-image: url('../lib/assets/topography.svg');
-	}
-</style>

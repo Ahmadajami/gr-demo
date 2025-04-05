@@ -6,7 +6,10 @@
 
 body {
 	background-color: #e2e2e2;
+	background-image: url('background/topography.svg');
+	background-size: cover;
 }
+
 @layer base {
 	:root {
 		--background: 0 0% 100%;

@@ -6,9 +6,6 @@
 	import Hr from '$lib/components/HR.svelte';
 	import BentoGrid from '$lib/components/layout/Grid/BentoGrid.svelte';
 	import { m } from '$lib/paraglide/messages';
-	import { inview } from 'svelte-inview';
-	import { fly } from 'svelte/transition';
-	import { elasticIn } from 'svelte/easing';
 
 	const services = [
 		{
@@ -27,7 +24,6 @@
 			icon: TrendingUp
 		}
 	];
-	let isInViewImage: boolean = $state<boolean>(false);
 </script>
 
 <section class="relative overflow-hidden px-4 py-3 sm:px-6 lg:px-8">
@@ -60,15 +56,15 @@
 			</div>
 		</div>
 	</div>
-	<BlureFade>
-		<p
-			style="white-space: pre-line"
-			class="mt-6 text-lg leading-relaxed text-muted-foreground sm:mr-0 ltr:ml-0 ltr:w-full rtl:mr-0 rtl:w-full md:rtl:mr-11"
-		>
-			{m.welcomeDesc()}
-		</p>
-	</BlureFade>
+
+	<p
+		style="white-space: pre-line"
+		class="ltr:ml-18 container mx-auto mt-6 text-lg leading-relaxed text-muted-foreground sm:mr-0 ltr:w-full rtl:mr-0 rtl:w-full md:rtl:mr-11"
+	>
+		{m.welcomeDesc()}
+	</p>
 </section>
+
 <section class="mt-12 flex flex-col px-4 py-20 lg:px-8">
 	<BlureFade delay={0.2}>
 		<h1 class="  myshadow ml-11 w-fit text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
@@ -98,7 +94,7 @@
 				}}
 			/>
 		</h2>
-		<p class="text-bold my-8 mr-0 text-pretty text-3xl tracking-tighter">
+		<p class="text-bold my-8 mr-0 whitespace-pre-line text-pretty text-3xl tracking-tighter">
 			In our world, we create timeless masterpieces from visions. We make the difference, and you
 			make the impossible.
 		</p>
@@ -106,7 +102,7 @@
 </section>
 
 <section class="my-40 h-[40vh]">
-	<div class="flex h-full w-full flex-col md:flex-row">
+	<div class="mx-0 flex h-full w-full flex-col md:flex-row">
 		<div class="order-2 flex h-full items-center p-6 md:order-1 md:basis-[40%]">
 			<div class="w-full">
 				<BlureFade>
@@ -124,9 +120,9 @@
 				</BlureFade>
 			</div>
 		</div>
-		<div class=" order-1 h-52 w-full md:order-2 md:h-full md:flex-1">
+		<div class=" order-1 h-full w-screen md:order-2 md:h-[40vh] md:flex-1">
 			<img
-				src="art.jpg"
+				src="art/art.jpg"
 				alt="Resin Artist "
 				class="h-full w-full border-none object-cover object-center"
 			/>

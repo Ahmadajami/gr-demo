@@ -13,7 +13,6 @@
 	} from '@lucide/svelte';
 	import { fly, scale } from 'svelte/transition';
 	import { cubicOut } from 'svelte/easing';
-	import { inview, type Options } from 'svelte-inview';
 	import MobileBentoGrid from './MobileBentoGrid.svelte';
 
 	interface GridItem {
@@ -25,6 +24,7 @@
 		colSpan: number;
 		rowSpan: number;
 		className?: string;
+		backgroundPosition: string;
 	}
 	let items: GridItem[] = [
 		{
@@ -34,7 +34,9 @@
 			href: '/',
 			colSpan: 1,
 			rowSpan: 3,
-			backgroundImage: 'url("https://picsum.photos/800")'
+			backgroundImage: 'url("bentogrid/shop.jpg")',
+
+			backgroundPosition: 'center'
 		},
 		{
 			id: '2',
@@ -43,7 +45,9 @@
 			href: '/',
 			colSpan: 1,
 			rowSpan: 1,
-			backgroundImage: 'url("https://picsum.photos/800")'
+			backgroundImage: 'url("bentogrid/partner.jpg")',
+
+			backgroundPosition: 'center'
 		},
 		{
 			id: '3',
@@ -52,7 +56,8 @@
 			href: '/',
 			colSpan: 1,
 			rowSpan: 1,
-			backgroundImage: 'url("https://picsum.photos/800")'
+			backgroundImage: 'url("bentogrid/projects.jpg")',
+			backgroundPosition: 'center'
 		},
 		{
 			id: '4',
@@ -61,7 +66,8 @@
 			href: '/',
 			colSpan: 2,
 			rowSpan: 1,
-			backgroundImage: 'url("https://picsum.photos/800")'
+			backgroundImage: 'url("bentogrid/aboutus.png")',
+			backgroundPosition: 'top'
 		},
 		{
 			id: '5',
@@ -70,7 +76,9 @@
 			href: '/',
 			colSpan: 2,
 			rowSpan: 1,
-			backgroundImage: 'url("https://picsum.photos/800")'
+			backgroundImage: 'url("bentogrid/sales.png")',
+
+			backgroundPosition: 'center'
 		},
 		{
 			id: '6',
@@ -79,7 +87,9 @@
 			href: '/',
 			colSpan: 1,
 			rowSpan: 1,
-			backgroundImage: 'url("https://picsum.photos/800")'
+			backgroundImage: 'url("bentogrid/products.jpg")',
+
+			backgroundPosition: 'center'
 		},
 		{
 			id: '7',
@@ -88,7 +98,8 @@
 			href: '/',
 			colSpan: 1,
 			rowSpan: 1,
-			backgroundImage: 'url("https://picsum.photos/800")'
+			backgroundImage: 'url("bentogrid/flooring.png")',
+			backgroundPosition: 'center'
 		},
 		{
 			id: '8',
@@ -97,7 +108,9 @@
 			href: '/',
 			colSpan: 2,
 			rowSpan: 1,
-			backgroundImage: 'url("https://picsum.photos/800")'
+			backgroundImage: 'url("https://picsum.photos/800")',
+
+			backgroundPosition: 'center'
 		},
 		{
 			id: '9',
@@ -106,38 +119,29 @@
 			href: '/',
 			colSpan: 2,
 			rowSpan: 1,
-			backgroundImage: 'url("https://picsum.photos/800")'
+			backgroundImage: 'url("https://picsum.photos/800")',
+
+			backgroundPosition: 'center'
 		}
 	];
-	const options: Options = {
-		rootMargin: '-50px',
-		unobserveOnEnter: false
-	};
 
 	let isInView: boolean = $state(false);
 </script>
 
-<div
-	class="hidden h-full w-full items-center justify-center md:flex"
-	use:inview={options}
-	oninview_change={(event) => {
-		const { inView } = event.detail;
-		isInView = inView;
-	}}
->
+<div class="hidden h-full w-full items-center justify-center md:flex">
 	<div class="grid h-full w-full grid-cols-5 grid-rows-3 gap-4 rounded-lg p-2">
 		{#each items as item, index (item.id)}
 			{@const Icon = item.icon}
 			<a
 				in:fly|global={{ y: 50, x: 200, duration: index * 350, delay: 100, easing: cubicOut }}
 				href={item.href}
-				class={`relative col-span-${item.colSpan} row-span-${item.rowSpan} flex flex-col items-center justify-center overflow-hidden rounded-lg shadow-md ${item.className || ''} transition-transform ease-in-out hover:scale-110 `}
+				class={`relative col-span-${item.colSpan} row-span-${item.rowSpan} flex flex-col items-center justify-center overflow-hidden rounded-lg shadow-2xl ${item.className || ''} transition-all duration-300 ease-in hover:z-10 hover:scale-110`}
 				style={item.backgroundImage
-					? `background-image: ${item.backgroundImage}; background-size: cover; background-position: center;`
+					? `background-image: ${item.backgroundImage}; background-size: cover; background-position: ${item.backgroundPosition};`
 					: ''}
 			>
 				{#if item.backgroundImage}
-					<div class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+					<div class="absolute inset-0 bg-black/35 backdrop-blur-[2px]"></div>
 				{/if}
 				<div
 					class="relative z-10 flex flex-col items-center justify-center p-4 text-white"
@@ -145,7 +149,7 @@
 				>
 					<Icon class="mb-2 h-8 w-8" />
 
-					<span class="text-sm font-semibold">{item.title}</span>
+					<span class="text-sm font-semibold drop-shadow-2xl">{item.title}</span>
 				</div>
 			</a>
 		{/each}
