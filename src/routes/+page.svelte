@@ -72,7 +72,7 @@
 		</h1>
 	</BlureFade>
 
-	<article class="container mt-8 h-96">
+	<article class=" mt-8 h-96">
 		<BentoGrid />
 	</article>
 </section>

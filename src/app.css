@@ -6,7 +6,7 @@
 
 body {
 	background-color: #e2e2e2;
-	background-image: url('background/topography.svg');
+	background-image: url('lib/assets/topography.svg');
 	background-size: cover;
 }
 

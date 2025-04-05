@@ -108,9 +108,9 @@
 			href: '/',
 			colSpan: 2,
 			rowSpan: 1,
-			backgroundImage: 'url("https://picsum.photos/800")',
+			backgroundImage: 'url("bentogrid/blogs.jpg")',
 
-			backgroundPosition: 'center'
+			backgroundPosition: 'left bottom'
 		},
 		{
 			id: '9',
@@ -119,7 +119,7 @@
 			href: '/',
 			colSpan: 2,
 			rowSpan: 1,
-			backgroundImage: 'url("https://picsum.photos/800")',
+			backgroundImage: 'url("bentogrid/creating.jpg")',
 
 			backgroundPosition: 'center'
 		}
